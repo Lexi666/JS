@@ -1,0 +1,27 @@
+<!-- inpput type預設為text -->
+<input type="number" id="x">
++
+<input type="number" id="y">
+
+<!-- 行為發生點 -->
+<!-- <input type="button" value="=" onclick="alert('ok')"> -->
+<input type="button" value="=" onclick="doCal()">
+<span id="answer"></span>
+
+
+<script>
+  function doCal() {
+// 區域變數:宣告在哪活在哪
+    let x = document.getElementById('x').value;
+    let y = document.getElementById('y').value;
+    x = parseInt(x);
+    y = parseInt(y);
+    let z = x+y
+
+    document.getElementById('answer').innerHTML = z;
+    // document.getElementById('answer').innerText = z;
+
+
+  }
+
+</script>

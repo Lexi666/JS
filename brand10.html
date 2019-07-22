@@ -1,0 +1,50 @@
+<script>
+  function doCal() {
+    document.getElementById("op");
+    // console.log(op.value);  //set or return 可以給值
+    // console.log(op.selectedIndex);
+
+
+    let x = document.getElementById('x').value;
+    let y = document.getElementById('y').value;
+    x = parseInt(x);
+    y = parseInt(y);
+    let z = x + y;
+    let = "" // 當沒有else給一個空字串
+
+    if (op.selectedIndex == 0) {
+      // +
+      z = x + y;
+    } else if (op.selectedIndex == 1) {
+      // -
+      z = x - y;
+
+    } else if (op.selectedIndex == 2) {
+      // x
+      z = x * y;
+
+    } else if (op.selectedIndex == 3) {
+      // /
+      let z1 = parseInt(x / y);
+      // console.log(typeof (x % y));
+      let z2 = x % y;
+      z = z1 + "......" + z2;
+    }
+
+    document.getElementById('answer').innerHTML = z;
+  }
+
+</script>
+<input type="number" id="x">
+<select name="op" id="op">
+  <option>+</option>
+  <option>-</option>
+  <option>*</option>
+  <option>/</option>
+</select>
+
+
+<input type="number" id="y">
+
+<input type="button" value="=" onclick="doCal()">
+<span id="answer"></span>

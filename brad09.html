@@ -1,0 +1,28 @@
+Year: <input type="number" id="number">
+<input type="button" value="是否為閏年" onclick="doThing()" />
+<span id="result"></span>
+<script>
+  function doThing() {
+    // 網頁裡抓出來的都是字串
+    let number = document.getElementById('number').value;
+    number = parseInt(number);
+    let isOk;
+    if (number % 4 == 0) {
+      if (number % 100 == 0) {
+        if (number % 400 == 0) {
+          isOk = true;
+        } else {
+          isOk = false;
+        }
+      } else {
+        isOk = true;
+      }
+    } else {
+      isOk = false;
+    }
+    document.getElementById("result").innerHTML =
+      isOk ? '閏年' : '平年';
+    // 建議使用innerHTML
+
+  }
+</script>

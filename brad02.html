@@ -1,0 +1,33 @@
+<script>
+  document.write("<h2>" + "變數屬性" + "</h2>");
+  // 變數宣告 是弱型別語言，宣告是用來畫範圍、存活區間life scope
+  // 直譯式
+  // var var1; 舊版
+  let var1; // let比較嚴僅 宣告 可以不給值
+  document.write(var1 + ": " + typeof (var1) + "<br>"); // 敘述句
+  var1 = 123; // result:undefined
+  document.write(var1 + ": " + typeof (var1) + "<br>"); // typeof 全等比較時可用到
+  var1 = 12.3;
+  document.write(var1 + ": " + typeof (var1) + "<br>");
+  var1 = '123';
+  document.write(var1 + ": " + typeof (var1) + "<br>");
+  var1 = true;
+  document.write(var1 + ": " + typeof (var1) + "<hr>");
+
+  document.write("<h2>" + "變數命名規則" + "</h2>");
+  let $_$ = 123; // [a-zA-Z$_][a-zA-Z0-9$_]*
+  // let _123 = 123;
+  // let 1abc = 123; // Uncaught SyntaxError: Invalid or unexpected token
+  // let @abc = 123; // Uncaught SyntaxError: Invalid or unexpected token
+  document.write($_$ + "<hr>");
+</script>
+<script>
+  document.write("<h2>" + "執行單元" + "</h2>");
+  // 執行單元裡有一個地方出錯 就不會執行
+  const name = "Brad"; // 宣告的同時要給值，不可以重複給值
+  // name = 'Eric';
+  document.write("Hi! My name is " + name + ".<br>");
+  document.write(`Hi! My name is ${name} .<br>`); // 倒引號: 會將變數進行置換
+  let a = 10, b = 3;
+  document.write(`${a} + ${b} = ${a + b}`) // 還可以運算
+</script>
