@@ -1,0 +1,107 @@
+<link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:300,400&display=swap" rel="stylesheet">
+<h1>身分字號產生器</h1>
+<form>
+  <div>
+    <!-- 1. 地區 -->
+    縣市:
+    <select id="area">
+      <option value="" disabled selected>請選擇</option>
+    </select>
+  </div>
+  <div>
+    <!-- 2. 性別 -->
+    性別:
+    <br />
+    <label for="male" ondblclick="cancel()">
+      <input type="radio" value="1" name="gender" id="male" />
+      男
+    </label>
+    <label for="female" ondblclick="cancel()">
+      <input type="radio" value="2" name="gender" id="female" />
+      女
+    </label>
+  </div>
+  <button type="button" value="" onclick="creaetTWIDByAll()">隨機產生</button>
+  <div>ID:&nbsp&nbsp<span id="result"></span></div>
+</form>
+
+<script src="IDgenerator.js"></script>
+<script>
+  function cancel() {
+    document.getElementById("male").checked = false;
+    document.getElementById("female").checked = false;
+  }
+</script>
+
+<style>
+  html {
+    background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+    font-family: 'Noto Sans TC', sans-serif;
+
+  }
+
+  h1 {
+    text-align: center;
+    color: rgb(71, 2, 71);
+    line-height: 160px;
+    font-size: 60px;
+    letter-spacing: 5px;
+    font-weight: 500;
+  }
+
+
+  form {
+    font-size: 18px;
+    height: 260px;
+    width: 260px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -150px 0 0 -150px;
+    padding: 20px;
+    color: rgb(71, 2, 71);
+    box-shadow: 5px 5px 25px -10px rgba(17, 1, 18, 0.5);
+
+  }
+
+  input,
+  select,
+  button {
+    font-size: 18px;
+    font-family: 'Noto Sans TC', sans-serif;
+    color: rgb(71, 2, 71);
+
+  }
+
+  label {
+    display: inline-block;
+    width: 49%;
+  }
+
+  select,
+  button {
+    width: 100%;
+  }
+
+  button {
+    background-color: #a18cd1;
+    border-radius: 20px;
+    border: none;
+    color: #ffffff;
+    font-weight: 300;
+    letter-spacing: 2px;
+    line-height: 28px;
+    box-shadow: 3px 3px 15px -10px rgba(17, 1, 18, 0.9);
+
+  }
+
+  button:hover {
+    background-color: #c282d6;
+  }
+
+  div {
+    margin: 20px 0 20px 0
+  }
+</style>
