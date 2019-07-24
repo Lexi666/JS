@@ -1,27 +1,26 @@
-<!-- 回去改成css寫法 -->
-<table width="100%" border="1">
+<script>
+</script>
+<table border="1" width="100%">
   <script>
     const ROW = 4;
-    const START = 2;
-    const COL = 4;
+    const START = 1;
+    const COL = 3;
     for (let k = 0; k < ROW; k++) {
       document.write("<tr>");
       for (let j = START; j < (START + COL); j++) {
         let newj = j + k * COL;
-
-        let isPink; // is 通用於有關布林值的開頭
+        let isPink;
         if (COL % 2 == 0) {
-          isPink = (newj + k) % 2 == 0;
+          isPink = (newj + k) % 2 == 0; //適用布林值
         } else {
           isPink = newj % 2 == 0;
         }
-
-        document.write("<td+ bgcolor='"(isPink ? "#fdb9c8":"#fffdd0")"'>");  //須修正
+        document.write("<td bgcolor='" + (isPink ? "pink" : "yellow") + "'>");
         for (let i = 1; i <= 9; i++) {
           let r = newj * i;
-          document.write(`${newj} x ${i} = ${r}<br>`)
+          document.write(`${newj} x ${i} = ${r}<br>`);
         }
-        document.write("</td>")
+        document.write("</td>");
       }
       document.write("</tr>");
     }

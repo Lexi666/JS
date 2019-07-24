@@ -1,0 +1,68 @@
+<!-- 星期三的作業 1-100 的質數表 
+1. 先產生一張表1-100
+2. for 跑兩次 1-10 * 1-9
+3. 再運算可否除以自己一半
+4. 加上註解
+-->
+<link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:300,400&display=swap" rel="stylesheet">
+
+<div>
+  <table id="table">
+  </table>
+</div>
+
+
+<script src="primeTable.js"></script>
+
+
+<style>
+  html {
+    font-family: 'Noto Sans TC', sans-serif;
+    background: #12c2e9;
+    background: linear-gradient(to bottom, #f64f59, #c471ed, #12c2e9);
+  }
+
+  div {
+    background-color: #f6fdff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 400px;
+    width: 400px;
+    margin: -200px 0 0 -200px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 35px -10px rgba(17, 1, 18, 0.8);
+  }
+
+  div:hover {
+    box-shadow: 2px 2px 25px -10px rgba(17, 1, 18, 0.3);
+
+  }
+
+  table {
+    height: 400px;
+    width: 400px;
+    border-collapse: separate;
+    border-radius: 10px;
+    border: 1px solid #e6e8e9;
+    border-spacing: 0;
+  }
+
+  tr,
+  td {
+    border: 0.8px solid #e6e8e9;
+    text-align: center;
+    font-size: 18px;
+    color: #331d3d;
+  }
+
+  td:first-child {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+
+  td:last-child {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+</style>
