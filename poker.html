@@ -1,0 +1,33 @@
+<!-- poker、洗牌、發牌 -->
+<script>
+  let poker = [];
+
+  // 52張牌
+  for (let i = 0; i < 52; i++) {
+
+    // 隨機產生52個數 之後再換成花色
+    let rand = parseInt(Math.random() * 52);
+
+    // 檢查機制 有沒有重複
+    let isRepeat = false;
+    // 如果產生的數 跟 之前產生的數 相同 就重複了
+    for (let j = 0; j < i; j++) {
+      if (rand == poker[j]) {
+        // 就重複了
+        isRepeat = true;
+        break;
+      }
+    }
+    // 沒有重複的話把數字放進去
+    if (!isRepeat) {
+      poker[i] = rand;
+    } else {
+      i--;
+    }
+  }
+
+  for (let i in poker) {
+    document.write(poker[i] + "<br>");
+  }
+
+</script>

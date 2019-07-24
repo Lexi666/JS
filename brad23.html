@@ -1,0 +1,17 @@
+<script>
+  let a = 10, b = 3, c = 945;
+  // 方法一: 也可交換字串
+  // let c = a;
+  // a = b;
+  // b = c;
+
+  // 方法二: for number
+  // a = a + b;
+  // b = a - b;
+  // a = a - b;
+
+  // 方法三: 彈性最大
+  [a, b, c] = [b, c, a];
+
+  document.write(`a=${a}; b=${b}; c=${c}`);
+</script>

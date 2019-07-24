@@ -1,0 +1,30 @@
+<script>
+  let a = 11, b = 8;
+  // 給判斷的值 進行比對
+  // 是全等比對 包含型別
+  // 弱 可以運算
+  // break 比對到了 就會脫離
+  // default 因為 上面的特性所以不一定要擺最後
+
+  switch (a) {
+    case 1:
+      document.write("A");
+      break;
+    case 10:
+      document.write("B");
+      break;
+    case '10':
+      document.write("B2");
+      break;
+    default:
+      document.write("Z");
+    // break;
+    case b + 2:
+      document.write("B3");
+    // break;
+    case 100:
+      document.write("C");
+      break;
+  }
+  document.write("<hr>end");
+</script>

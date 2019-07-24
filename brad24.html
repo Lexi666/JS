@@ -1,0 +1,24 @@
+<script>
+  let a = [1, 2, 'III', 3, 4, 'Brad', 5, 'CY', 6];
+
+  a[10] = 900;
+
+  for (let i = 0; i < a.length; i++) {
+    document.write(a[i] + " ");
+  }
+  // 1 2 III 3 4 Brad 5 CY 6 undefined 900
+
+  document.write("<hr>");
+  for (let i in a) {
+    document.write(a[i] + " ")
+  }
+  // 1 2 III 3 4 Brad 5 CY 6 900
+
+  document.write("<hr>");
+  for (let value of a) {
+    document.write(value + " ");
+  }
+  // 1 2 III 3 4 Brad 5 CY 6 undefined 900
+
+
+</script>

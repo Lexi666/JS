@@ -84,5 +84,16 @@ function creaetTWIDByAll() {
     }
   }
   
+
+  var text = "";
+  var i = 0;
+  do {
+    text += "The number is " + i;
+    i++;
+  }
+  while (i < 5);
+
+
+
   return document.getElementById('result').innerHTML = result;;
 }

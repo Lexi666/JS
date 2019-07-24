@@ -1,0 +1,12 @@
+<script>
+  let p = [0, 0, 0, 0, 0, 0]; //
+  for (let i = 0; i < 1000000; i++) {
+    let round = parseInt(Math.random() * 9); // 0-5, 0-8, 6, 7, 8
+    p[round >= 6 ? round - 3 : round]++;
+  }
+  for (let i = 0; i < p.length; i++) {
+    document.write(`${i + 1}點出現${p[i]}次<br>`);
+  }
+
+// 2019
+</script>

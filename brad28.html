@@ -1,0 +1,52 @@
+<script>
+  function sayYa() {
+    document.write("Ya!" + "<br>");
+  }
+  // 傳遞參數
+  function sayYaV2(name = '我是預設沒名字') {
+    document.write(`Ya! ${name} <br>`);
+  }
+
+  function sayYaV3(name = '我是預設可以傳2個名字的') {
+    document.write(`Ya! ${name} <br>`);
+  }
+  function sayYaV4(names) {
+    if (names instanceof Array) {
+      for (let name of names) {
+        document.write(`Ya! ${name}<br>`);
+      }
+    }
+  }
+
+  // ...不定個數參數傳遞，可先設必要參數
+  function sayYaV5(welcome, ...names) {
+    if (names instanceof Array) {
+      for (let name of names) {
+        document.write(`${welcome}! ${name}<br>`);
+      }
+    }
+  }
+
+  sayYa();
+  sayYaV2('Brad');
+  sayYaV2();
+  sayYaV3(['ldl', 'hjhjh']);
+  sayYaV4(['我是A', '我是b', '我是c', '我是d', '我是e', '我是f']);
+
+  document.write("<br>" + "我是分隔線" + "<hr>");
+  sayYaV5('你好', '我是紅茶'); //看起來不像Array 但我
+  sayYaV5('大家好', '我是A', '我是b', '我是c', '我是d', '我是e', '我是f'); //看起來不像Array 但我是
+
+
+  // 用變數來處理 function
+  document.write("<br>" + "我是分隔線" + "<hr>");
+
+  let fxy = function (x, y) {
+    return 2 * x + y;
+  };
+  document.write(fxy(10, 3) + "<br>");
+
+  let newfxy = fxy;
+  document.write(newfxy(19, 3) + "<br>");
+
+</script>

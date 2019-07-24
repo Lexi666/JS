@@ -1,0 +1,28 @@
+<!-- poker、洗牌、發牌 -->
+<!-- 版本二 -->
+<script>
+  let poker = [];
+  let rand, isRepeat;
+  for (let i = 0; i < 52; i++) {
+    do {
+      rand = parseInt(Math.random() * 52);
+
+      // 檢查機制 有沒有重複
+      // 如果產生的數 跟 之前產生的數 相同 就重複了
+      isRepeat = false;
+      for (let j = 0; j < i; j++) {
+        if (rand == poker[j]) {
+          // 就重複了
+          isRepeat = true;
+          break;
+        }
+      }
+    // 當重複時
+    } while (isRepeat);
+    poker[i] = rand;
+  }
+  for (let i in poker) {
+    document.write(poker[i] + "<br>");
+  }
+
+</script>

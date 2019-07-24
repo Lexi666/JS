@@ -1,0 +1,59 @@
+<script>
+  // 按順序產生
+  let poker = [];
+
+  for (let i = 0; i < 52; i++)poker[i] = i;
+
+  for (let i = poker.length - 1; i > 0; i--) {
+    let rand = parseInt(Math.random() * (i + 1));
+    // poker[i] <=> poker[rand] 數值交換
+    // 洗牌
+    [poker[i], poker[rand]] = [poker[rand], poker[i]]
+  }
+  for (let i in poker) {
+    document.write(poker[i] + "<br>");
+  }
+  document.write("<hr>");
+  // 發牌到四個玩家手上
+  let players = [[], [], [], []];
+  for (let i = 0; i < poker.length; i++) {
+    players[i % 4].push(poker[i]);
+    // player[player.length][] = poker[i];
+  }
+  // 驗算
+  for (let i in player[0]) {
+    document.write(player[0][i] + "<br>");
+  }
+
+</script>
+<!-- 待修正 找card -->
+
+
+<table border="1" style="border-collapse:collapse" width="100%">
+  <script>
+    //先定義花色
+    let suits = ['&spades;', '&hearts;', '&diams;', '&clubs;'];
+    // 定義大小
+    let nums = ['A', 2, 3, 4, 5, 6, 7, 8, 9, 10, 'J', 'Q', 'K'];
+    // 定義顏色
+
+
+    // of 每一家
+    for (let player of players) {
+      player.sort(function (a, b) { return a - b; });
+      document.write("<tr>");
+      for (let card of player) {
+        // 理牌
+        // 每個人手上一張牌
+        if (suits[parseInt(card / 13) == 1 || parseInt(card / 13) == 2]) {
+          document.write("<td style='color:red'>");
+        } else {
+          document.write("<td style='color:black'>");
+        }
+        document.write("</td>")
+      }
+      document.write("/tr");
+    }
+  </script>
+  </tr>
+</table>

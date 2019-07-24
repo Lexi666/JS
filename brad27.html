@@ -1,0 +1,14 @@
+1+2+..+
+<input id="num" type="number">
+<input type="button" value="=" onclick="sum()">
+<span id="answer"></span>
+
+<script>
+  function sum() {
+
+    let num = parseInt(document.getElementById("num").value);
+    let i = 1, sum = 0;
+    while (i <= num) sum += i++; //+= :加上然後等於
+    document.getElementById("answer").innerHTML = sum;
+  }
+</script>

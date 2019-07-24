@@ -1,0 +1,28 @@
+<!-- -二維陣列練習 -->
+<script>
+  let a = [];
+  a[0] = [];
+  document.write(a instanceof Array); //true
+  document.write("<hr>"); //true
+
+  document.write(a[0] instanceof Array); //true
+  document.write("<hr>"); //true
+  a[1] = [];
+  a[0][0] = 123;
+  a[0][1] = 100;
+  a[1][0] = 12;
+  a[2] = 34;
+
+  // document.write(a + "<br>"); //true
+
+  for (let i in a) {
+    if (a[i] instanceof Array) {
+      for (let j in a[i]) {
+        document.write(a[i][j] + "<br>"); //true
+      }
+    } else {
+      document.write(a[i]);
+    }
+    document.write("<hr>"); //true
+  }
+</script>

@@ -1,0 +1,41 @@
+<!-- 驗證身分證 -->
+<!-- <script src="bradutils.js"></script>
+<input type="text" id="idCard" name="idCard">
+<input type="button" onclick="vaild()" value="驗證">
+<span id="show"></span>
+<script>
+  id = "A123456789";
+  // let id = document.getElementById('idCard');
+  console.log(id);
+  function vaild() {
+    if (checkTWID(id)) {
+      document.getElementById('show').innerHTML = "Ok!";
+    } else {
+      document.getElementById('show').innerHTML = "No!";
+    }
+
+  }
+</script> -->
+
+<script src="bradutils.js"></script>
+
+<script>
+  function checkID() {
+    let id = document.getElementById('id').value;
+    let mesg = document.getElementById('mesg');
+    mesg.innerHTML = checkTWID(id) ? '驗證通過!' : '不正確 請重新輸入!';
+  }
+</script>
+
+<form>
+  Name: 
+  <input type="text" /><br>
+  ID: 
+  <input id="id" type="text" onblur="checkID()" /><br>
+  <span id="mesg"></span><br>
+  Gender: 
+  <input type="radio" name="Gender" checked />Male
+  <input type="radio" name="Gender" checked />Female
+
+</form>
+

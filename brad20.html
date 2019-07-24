@@ -1,0 +1,45 @@
+<script>
+  let a = [];
+  let b = [1, 2, 3, 4];
+  let c = new Array(); // 不建議
+  let d = new Array(7); // 不建議 只給一個整數 產生幾個元素
+  let e = new Array(1, 2, 3, 4); // 不建議 產生4個元素
+  // document.write(typeof a); // 較廣泛 array
+  document.write(a instanceof Array); // a 是不是"array"的物件實體
+
+  document.write(a.length + "<br>");
+  // a.push(1); // 塞一個在後面 a[]=1
+  a.push(1); a.push(12); a.push(123); // 連續塞
+
+  document.write(a.length + "<br>");
+  for (let i = 0; i < a.length; i++) {
+    document.write(a[i] + "<br>");
+  }
+  document.write("<hr>");
+  a[7] = 2000;
+
+  //巡訪每一個
+  document.write(a.length + "<hr>");
+  for (let i = 0; i < a.length; i++) {
+    document.write(a[i] + "<br>");
+  }
+
+  // 過濾 undefine的值
+  document.write(a.length + "<hr>");
+  for (let i in a) { //i在a中
+    document.write(a[i] + "<br>");
+  }
+
+  // 把陣列轉成字串
+  document.write("<hr>" + a.toString());
+
+  //pop return 最後面那個(先進後出)，拿出來就不見了
+  document.write("<hr>" + a.pop());
+  document.write("<hr>" + a.toString()); //長度同時減少
+
+  //刪除 的那個位子還在，長度不變delete
+  
+  // 總結:
+  // 1. 一維陣列: [index]是記憶體偏移量的觀念
+  // 2. 二維陣列: 
+</script>
