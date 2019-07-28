@@ -1,0 +1,145 @@
+<link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:300,500&display=swap" rel="stylesheet">
+
+<div>
+
+  <table>
+    <tr class="td_radius">
+      <td class="card_1 highlight"><img src="alien.png"></td>
+      <td class="card_1"><img src="planet.png"></td>
+      <td class="card_1"><img src="planet.png"></td>
+      <td class="card_1"><img src="pacman.png" alt="Oops!img"></td>
+      <td class="card_1"><img src="alien.png"></td>
+      <td class="card_1"><img src="jupiter.png" alt="Oops!img"></td>
+      <td class="card_1"><img src="atom.png" alt="Oops!img"></td>
+    </tr>
+    <tr>
+      <td class="card_2"><img src="alien.png"></td>
+      <td colspan="5" rowspan="5" class="center" onclick="start()">
+        &nbsp Start!
+        <br />
+        <img src="start.png">
+      </td>
+      <td class="card_1">
+        <img src="pacman.png" alt="Oops!img">
+      </td>
+    </tr>
+    <tr>
+      <td class="card_2 star"> <img src="jupiter.png" alt="Oops!img">
+      </td>
+      <td class="card_1"><img src="atom.png" alt="Oops!img"></td>
+    </tr>
+    <tr>
+      <td class="card_2"><img src="jupiter.png" alt="Oops!img"></td>
+      <td class="card_1"><img src="atom.png" alt="Oops!img"></td>
+    </tr>
+    <tr>
+      <td class="card_2"><img src="mars.png" alt="Oops!img"></td>
+      <td class="card_1"><img src="planet.png" alt="Oops!img"></td>
+    </tr>
+    <tr>
+      <td class="card_2"><img src="atom.png" alt="Oops!img"></td>
+      <td class="card_1"><img src="moon.png" alt="Oops!img"></td>
+    </tr>
+    <tr class="td_radius">
+      <td class="card_2"> <img src="pacman.png" alt="Oops!img"></td>
+      <td class="card_2"><img src="moon.png" alt="Oops!img"></td>
+      <td class="card_2"><img src="planet.png" alt="Oops!img"></td>
+      <td class="card_2"><img src="mars.png" alt="Oops!img"></td>
+      <td class="card_2"><img src="alien.png"></td>
+      <td class="card_2"><img src="jupiter.png" alt="Oops!img"></td>
+      <td class="card_1"><img src="atom.png" alt="Oops!img"></td>
+    </tr>
+  </table>
+</div>
+
+<script src="FruitMaTsai.js"></script>
+
+
+<style>
+  html {
+    font-family: 'Noto Sans TC', sans-serif;
+    background: #FF5F6D;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #FFC371, #FF5F6D);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #FFC371, #FF5F6D);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  }
+
+  div {
+    background-color: #f6fdff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 400px;
+    width: 400px;
+    margin: -200px 0 0 -200px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 35px -10px rgba(90, 41, 0, 0.8);
+  }
+
+  div:hover {
+    box-shadow: 2px 2px 25px -10px rgba(90, 41, 0, 0.3);
+
+  }
+
+  table {
+    height: 400px;
+    width: 400px;
+    border-collapse: separate;
+    border-radius: 10px;
+    border: 1px solid #e6e8e9;
+    border-spacing: 0;
+  }
+
+  tr,
+  td {
+    width: 56px;
+    height: 56px;
+    border: 0.8px solid #e6e8e9;
+    text-align: center;
+    font-size: 18px;
+    color: #331d3d;
+  }
+
+  .td_radius td:first-child {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+
+  .td_radius td:last-child {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+
+  td img {
+    width: 40px;
+    height: 38px;
+  }
+
+  .center {
+    letter-spacing: 6px;
+    color: #FF5F6D;
+    font-size: 30px;
+    font-weight: 600;
+  }
+
+  .center:hover {
+    color: #ffffff;
+    background: rgb(253, 103, 116);
+  }
+
+  td.center img {
+    width: 85px;
+    height: 85px;
+    padding: 10px 20px 0 0;
+  }
+
+  /* #card_1,  */
+  /* .card_2{ */
+  .highlight {
+    box-shadow: 5px 5px 90px -10px rgb(255, 238, 0);
+    background-color: rgb(255, 236, 10);
+    border: none;
+  }
+</style>
